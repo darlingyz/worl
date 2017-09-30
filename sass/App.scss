@@ -1,0 +1,218 @@
+#content{
+    width: 100%;
+    height:1016px;
+    margin: 0 auto;
+   .Title{
+       width: 100%;
+       height: 64px;
+       background: #fff;
+     
+   }
+   .TitleLeft{
+      width: 197px;
+      height: 46px;
+      margin: 8px 0 10px 22px; 
+      float: left; 
+      img{
+          width: 45px;
+          height: 44px;
+          float: left; 
+          margin-right: 10px;       
+      }
+    .TitleName{
+        width: 132px;
+        height: 43px;
+        word-wrap:break-word;
+        float: left;
+      }
+ }
+ .TitleRight{
+     width: 364px;
+     height: 64px;
+     float: right;
+     li{
+         width: 120px;
+         height: 64px;
+         line-height: 64px;
+         text-indent: 24px;
+         float: left;
+         position: relative;
+        .FullScreen{
+            cursor: pointer;
+        }
+     }
+     .userNames{
+        position: absolute; 
+        left: 24px;
+        top: -2px;        
+     }
+ }
+ .DownLeft{
+   
+        .HomeLeft{
+        width: 198 px;
+        height: 1016px;
+        background: #262C38;
+       float: left;       
+    .navTilte{
+          width: 198px;
+          height: 52px;
+          line-height: 52px;
+          text-indent: 22px;
+          border-bottom: 1px solid #222;     
+      }
+     .HLtop{
+         width:198px;
+         height:416px;
+         background: #262C38;
+          a{
+       color: #fff;
+   }
+}
+    .navList{
+       width: 198px;
+       height: 358px;
+       background: #262C38;       
+       li{
+           width: 100%;
+           height: 48px;
+           line-height: 38px;
+           font-size: 14px;
+           img{
+               float: left;
+               margin: 9.5px 10px 0 25px;
+           }
+           p{
+               float: left;                           
+           }          
+       }
+    }      
+   .HLdown{
+       width: 198px;
+       height:600px ;
+       background: #1A1E26;
+      h2{
+         width: 100%;
+        height: 54px;
+        line-height: 54px;
+        text-indent: 22px;
+      }
+      .NavList{
+          width: 198px;
+          li{
+              width: 100%;
+              height: 40px;
+              line-height: 40px;
+              img{
+                  float: left;
+                  margin: 13px 18px 0 22px;
+              }
+               a{
+              color: #fff;
+             } 
+          }         
+      }
+   }                              
+ }    
+}
+ .NavLists{
+        width: 1726px;
+        height: 56px;
+        border-top: 1px solid #ccc;
+        border-bottom:1px solid #ccc;
+        background: #fff;
+        float: right;
+    img{
+        float: left;
+        margin: 20.5px 18px 0 18px;
+        cursor: pointer;
+        }         
+    .ant-breadcrumb{
+        float: left;
+        line-height: 56px;
+    span:nth-of-type(2) a:hover{ 
+         color: #4A4A4A;
+         text-decoration: none;
+        }
+    span:nth-of-type(3) a{ 
+            color: #c0c0c0;
+    }             
+}
+ .CTRight{
+     width: 364px;
+     height: 58px;
+     float: right;
+     li{
+         width: 120px;
+         height: 54px;
+         border-left: 1px solid #ccc;
+         float: left;
+        img:nth-of-type(1){
+            margin:16px 0 0 24px ;
+        } 
+        img:nth-of-type(2){
+            margin-top:20px ;
+        } 
+     }
+ }  
+}
+    #DownCenter{
+        width:1358px ;
+        height: 558px;
+        float: left;
+        
+    }
+        .DownRight{
+            width: 360px;
+            height: 958px;
+            float: right;
+          .CentRight{
+            width: 360px;
+            height: 958px;
+        dl{
+            width: 310px;
+            height: 98px;
+            margin: 19px;
+            cursor: pointer;     
+            position: relative;
+              dt{
+              margin:10px 0 0 15px;  
+              float: left;
+            }
+            dd{
+                float: left;
+                margin: 18px 0 0 28px;
+                p:nth-of-type(1){
+                    font-size: 24px;
+                    font-weight: 100;
+                }
+                p:nth-of-type(2){
+                    font-size: 18px;
+                
+            }
+        }
+    }
+    dl:nth-of-type(1){
+        background: #545CA6;      
+    }
+     dl:nth-of-type(2){
+        background: #4DB6CB;      
+    }
+     dl:nth-of-type(3){
+        background: #F45391;      
+    }
+     dl:nth-of-type(4){
+        background: #1BB668;      
+    }
+     dl:nth-of-type(5){
+        background: #FFCC00;      
+    }
+     dl:nth-of-type(6){
+        background: #E64F4E;      
+    }
+     dl:nth-of-type(7){
+        background: #157BBB;      
+      }   
+    }        
+  }  
+}  

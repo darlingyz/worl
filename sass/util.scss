@@ -1,0 +1,45 @@
+@mixin flexBox{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -moz-flexbox;
+    display: -o-flexbox;
+    display: flex;
+}
+@mixin flex($num:1){
+     -webkit-box-flex: $num;
+     -moz-box-flex:$num;
+     -o-box-flex:$num;
+     -ms-box-flex:$num;
+    flex: $num;
+}
+@mixin flex-direction($dir:row){
+    @if $dir == row {
+        -webkit-box-orient: horizontal;
+        -moz--box-orient: horizontal;
+        -o-box-orient: horizontal;
+        -ms-box-orient: horizontal;       
+        flex-direction: row;
+    }
+    @else {
+         -webkit-box-orient: vertical;
+         -moz-box-orient: vertical;
+         -o-box-orient: vertical;                
+          flex-direction: column;
+    }
+}
+
+//水平垂直居中
+@mixin flex-center{
+    @include flexBox;
+    @include flex-direction("column");    
+    -webkit-box-pack: center;
+    -moz-box-pack: center;
+    -o-box-pack: center;
+   -ms-box-pack:center;
+    -webkit-justify-content: center;
+    -moz-justify-content: center;
+    -o-justify-content: center;
+    -ms-justify-conter:center;
+    -webkit-box-align: center;
+    align-items: center;
+}

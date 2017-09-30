@@ -1,0 +1,268 @@
+@import "util.scss";//工具类css----兼容性
+
+html,body{
+    width: 100%;
+    height: 100%;
+ // overflow: hidden;  
+    font-family: Regular,'微软雅黑','宋体';
+    font-size: 14pt;
+    overflow-x: hidden;
+}
+
+#app{
+  width: 1924px;
+  height: 1080px;
+  margin: 0 auto;
+  background:#eee;
+  .font_S18{
+    font-size:18pt;
+}
+.font_S24{
+    font-size:24pt;
+}
+.font_S20{
+    font-size: 20pt;
+}
+.font_S18{
+    font-size: 18pt;
+}
+.font_S16{
+    font-size:16pt;
+}
+
+.font_S12{
+    font-size:12px;
+}
+.font_S141{
+    
+    font-size:14pt ;
+}
+.font_S14{
+    
+    font-size:14px ;
+}
+
+
+/* ------color------ */
+.CLR_100r46g46b{
+    color:#FFD8D8;
+}
+.CLR_100r30g30b{
+    color:#FF7676;
+}
+.CLR_60r21g21b{
+    color:#E64F4E;
+}
+.CLR_31r12g12b{
+    color:#802B2B;
+}
+
+
+.CLY_100r37g{
+    color:#FF9500;
+}
+
+.CLY_31r26g{
+    color: #806600;
+}
+.CLY_100r47g{
+    color: #FFCC00;
+}
+.CLY_100r53g34b{
+    color: #FFE789;
+}
+.CLY_100r62g40b{
+    color: #FFF0B2;
+}
+.CLG_5r30g20b{
+    color: #138049;
+}
+.CLG_8r7g27b{
+    color: #1BB668;
+}
+.CLG_8r41g33b{
+    color:#22E684;
+}
+.CLG_45r57g49b{
+    color:#BEEFD6;
+}
+.CLB_18r20g26b{
+    color: #455066
+    
+}
+.CLB_10r23g22b{
+    color: #262C38;
+    
+}
+.CLB_8r10g10b{
+    color: #1A1E26;
+    
+}
+
+.CLB_19r28g32b{
+    color: #5B7181;
+    
+}
+.CLB_51r53g56b{
+    color: #BAC6CE;
+    
+}
+.CLB_10r23g22b{
+    color: #0F5987;
+    
+}
+.CLB_5r31g40b{
+    color:#157BBB;
+}
+.CLB_9r52g100b{
+    color: #1CA8FF;
+}
+.CLB_60r17g100b{
+    color: #C3E8FF;
+}
+
+.CLBr_16r34g31b{
+    color:#414780;
+}
+.CLBr_51r25g45b{
+    color: #545CA6;
+}
+.CLBr_31r34g48b{
+    color:#797FB4;
+}
+
+.CLBr_53r16g63b{
+    color:#C5D1EB;
+}
+.CLBg_12r28g31b{
+    color:#307280;
+}
+.CLBg_21r49g56b{
+    color:#4DB6CB;
+}
+.CLBg_24r57g64b{
+    color:#5AD5ED;
+}
+
+.CL_wite{
+    color:aliceblue;
+}
+.CL_black{
+    color: #000000;
+}
+
+
+.CL_29g43b{
+    color:#0073B9;
+}
+.CL_45r47g63b{
+    color: #C5D1EB;
+}
+.CL_23r28g32b{
+    color:#5B7181;
+}
+/*------自定义按钮样式------*/
+
+/*------透明度------*/
+.aphl_90{
+    opacity: 0.9;
+}
+.aphl_80{
+    opacity: 0.8;
+}
+.aphl_70{
+    opacity: 0.7;
+}
+.aphl_70{
+    opacity: 0.6;
+}
+.aphl_50{
+    opacity: 0.5;
+}
+.aphl_50{
+    opacity: 0.4;
+}
+.aphl_30{
+    opacity: 0.3;
+}
+.aphl_20{
+    opacity: 0.2;
+}
+.aphl_10{
+    opacity: 0.1;
+}
+
+}
+#container{
+    width: 1924px;
+    margin: 0 auto;
+    height: 1080px;
+    @include flexBox;
+    @include flex-direction('column');
+    
+//  -webkit-box-orient: vertical;
+//  flex-direction: column;
+        .type{
+            width: 1924px;
+            flex: 1;
+             @include flexBox;
+             @include flex-direction('column');
+            #header{
+                height: 46px;
+                width: 1924px;
+                background-color: #fc1158;               
+           
+//              font-weight: bold;
+               // color: #eee;
+                text-shadow: 1px 1px 1px #000;                
+                .commonHeader{
+                   width: 1924px;
+                   height: 1080px;
+                    @include flexBox;
+                    @include flex-direction("row");
+                    text-align: center;
+                    .back{
+                        width: 100%;
+                        @include flex-center;
+                    }
+                    .title{
+                        flex: 1;
+                        @include flex-center;
+                    }
+                    .moreInfo{
+                          width: 100%;
+                        @include flex-center;
+                    }
+                }
+                
+            }
+            #content{
+                width: 100%;
+                overflow: auto;
+               &::-webkit-scrollbar {display:none}
+               @include flex(1);
+               
+               #detailBox{
+                   height: 100%;
+               }
+            }
+        }
+        
+}
+//#toast{
+//  position: absolute;
+//  bottom:100px;
+//  width: 60%;
+//  left:20%;
+//  background-color: rgba(0,0,0,0.4);
+//  color: #fff;
+//  line-height: 22px;
+//  text-align: center;
+//  border-radius: 10px;
+//  padding: 8px;
+//  display: none;
+//}
+
+/* font*/
+
+
