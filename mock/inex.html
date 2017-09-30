@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script src="jquery-1.11.0.js" type="text/javascript" charset="utf-8"></script>
+	<!--<script src="http://mockjs.com/dist/mock.js"></script>
+-->	<script type="text/javascript">
+	/*	Mock.mock('http://localhost:8000', {
+		    "proList|2":[{
+		    	'name'     : '@name',
+			    'price|10-100': 100,
+			    "color":Mock.mock('@color()'),
+			    "imgsrc":Mock.Random.image('200x100', '#50B347', '#FFF', 'Mock.js')
+		    }]
+		});
+		*/
+	/*	$.ajax({
+		    url: 'http://localhost:8000',
+		    dataType:'json'
+		    }).done(function(data, status, xhr){
+		    console.log(
+		   	 JSON.stringify(data, null, 4)
+		    )    
+		})*/
+		$.ajax({
+			type:"get",
+			url:"http://localhost:8000",
+			async:true,
+			success:function(data){
+				var datas=JSON.parse(data)
+				console.log(datas)
+			}
+		});
+		
+	</script>
+</html>

@@ -7,11 +7,38 @@
         height: 512px;
         background: #DCE0E8;
     }
+     .userDatail{//当后端传过的参数为1是表示用户存在，此时让该用户通过ajax获取后列表显示，否则该模块继续隐藏；
+        width: 100%;
+        height: 100%;
+       
+        ul{
+            width: 1358px;
+            height: 434px;
+            overflow: hidden;
+        li{
+         width: 352px;
+         height: 434px;
+         float: left;
+         margin:33px 0 0 78px ;
+         .MakeDetail{
+             width: 352px;
+             height: 46px;
+             line-height: 46px;
+             background: #fff;
+             color: #999;
+             text-align: center;
+             cursor: pointer;
+         }
+        }
+    } 
+  } 
     //上边的内容区，需要改变的地方   
     .TopContent{
         width: 1358px;
         height: 512px;
-        //display: none;
+        display: none;//如果传的参数为code==1则表示用户存在，那么就让该模块显示隐藏，如果code==0那么就让该模块继续显示
+     
+    
     }
     //左边
       .CTLeft{

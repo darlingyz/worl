@@ -65,20 +65,69 @@ const columns = [{
 export default class Home extends React.Component{
 constructor(props){
 		super(props);
+		this.state={
+			userList:[]
+		}
 	}
 		componentWillMount(){
+			var that=this;
+			const code=1;
+		{/*===后台发送过来匹配的后的数据，如果发送的code==1，则表示匹配成功，表示用户存在，如果发送过的code==0,表示没有这个用户，则提示添加用户=====*/}
+		if(code==1){				
+				{/*MyAjax.fetchJsonp(url,function(res){
+					console.log(res)
+				var datas=res;	
 			
+				that.setState({
+						userList:datas
+					})	
+				},function(err){
+					console.log(err)
+				})*/}
+		$.ajax({
+			type:"get",
+			url:"http://localhost:8000",
+			async:true,
+			success:function(data){
+				var datas=JSON.parse(data)
+				console.log(datas);
+				that.setState({
+						userList:datas.list
+				})
+			}
+})
+		}else{
+			console.log("用户不存在，请新建业务！")			
+		}							
+	}
+	render(){	
+		var that=this;
+		var userDetail=that.state.userList;
+		var arr=[];
+		console.log(userDetail);  
+		for(var i in userDetail){
+					arr.push(
+						<li key={i} className="userdetail">
+							<img src={userDetail[i].img}/>
+							<p>{userDetail[i].id}</p>
+							<p>{userDetail[i].average}</p>
+							<p className="MakeDetail font_S1801">确认身份</p>
+						</li>
+						
+					)
 		}
-	render(){
-		
-		
-		
 		return(
 			
 			<div className="CenterMiddle">
 				{/*----客户列表以及业务需求----*/}
-		
+	                  			
 			<div className="CMTop">
+				<div className="userDatail">
+					<ul>
+						{arr}
+					</ul>
+				</div>
+			
 			<div className="TopContent">
 					{/*----左边客户列表----*/}
 				<div className="CTLeft">

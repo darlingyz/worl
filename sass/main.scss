@@ -7,8 +7,12 @@ html,body{
     font-family: Regular,'微软雅黑','宋体';
     font-size: 14pt;
     overflow-x: hidden;
+    text-decoration: none;
+    list-style: none;
 }
-
+a {
+  text-decoration: none;
+}
 #app{
   width: 1924px;
   height: 1080px;
@@ -25,6 +29,9 @@ html,body{
 }
 .font_S18{
     font-size: 18pt;
+}
+.font_S1801{
+    font-size: 18px;
 }
 .font_S16{
     font-size:16pt;
