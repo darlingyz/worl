@@ -1,5 +1,5 @@
 $(document).ready(function(){
-var video = document.querySelector('video');
+var video = document.querySelector('#video');
 		var promisifiedOldGUM = function(constraints) {
 			// 第一个拿到getUserMedia，如果存在            
 			var getUserMedia = (navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia || navigator.msGetUserMedia|| navigator.oGetUserMedia);
@@ -24,7 +24,7 @@ var video = document.querySelector('video');
 		if (navigator.mediaDevices.getUserMedia === undefined) {
 			navigator.mediaDevices.getUserMedia = promisifiedOldGUM;
 		}		
-		// Prefer camera resolution nearest to 1280x720.        
+		// Prefer camera resolution nearest to 540x360.        
 		var constraints = {
 			audio : false,
 			video : {
@@ -47,7 +47,6 @@ var video = document.querySelector('video');
 		document.getElementById("picture").addEventListener("click", function() {
 			ctx.drawImage(video, 0, 0, 540, 360);
 			convertCanvasToImage();
-			//UploadPic();
 		});
 		
 		// 从 canvas 提取图片 image  
@@ -55,14 +54,14 @@ var video = document.querySelector('video');
 		  // canvas.toDataURL 返回的是一串Base64编码的URL，当然,浏览器自己肯定支持  
 		  // 指定格式 jpeg canvas只能对Jpeg格式的图片进行压缩； 如果使用的是PNG格式，那么base64转码后比图片还要大，用户体验不好
 		var canvas=document.getElementById("myCanvas");
-		canvas.src= canvas.toDataURL("image/jpeg",0.6);     
+		canvas.src= canvas.toDataURL("image/jpeg");     
 		var Pic= canvas.src;
-		 Pic = Pic.replace(/^data:image\/(png|jpg);base64,/,"");
-		 console.log(Pic);	
-		/*   var IdCard=document.getElementById('userCode').value;  
-		  $.ajax({
+		 Pic = Pic.replace(/^data:image\/(png|jpeg);base64,/,"");
+		// console.log(Pic);	
+		 
+		 /* $.ajax({
 		  	type:"POST",
-		  	url:"<%=basePath%>/touch/touchIndexManager.do?method=uploadPic&type=0&IdCard="+IdCard",
+		  	url:"<%=basePath%>/?method=uploadPic&type=0&IdCard="+IdCard",
 		  	data:{"imageData":Pic},
 		  	success:function(msg){
 		  		console.log("图片成功发送给后台！")		  		
@@ -70,6 +69,6 @@ var video = document.querySelector('video');
 		  	error:function(err){
 		  		console.log(err.data)
 		  	}		  	
-		  })*/	    	    		    
-		} 
+		  })*/	
+		 } 
 })

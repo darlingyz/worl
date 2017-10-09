@@ -1,0 +1,677 @@
+.CenterMiddle {
+    width: 1358px;
+    height: 100%;
+    //用户列表添加------
+    .CMTop {
+        width: 1358px;
+        height: 512px;
+        background: #DCE0E8;
+        overflow: hidden;
+    }
+    //当后端传过的参数为1是表示用户存在，此时让该用户通过ajax获取后列表显示，否则该模块继续隐藏；
+    .userDatails {
+        //======================================
+        display: none;
+        width: 1358px;
+        height: 512px;
+        overflow: hidden;
+        dl {
+            width: 352px;
+            height: 512px;
+            float: left;
+            margin: 33px 0 0 78px;
+            img {
+                width: 352px;
+                height: 234px;
+            }
+            dt {
+                width: 100px;
+                height: 126px;
+                float: left;
+                text-align: left;
+                color: #7B7E82;
+                margin-top: 26px;
+                margin-left: 78px;
+            }
+            dd {
+                width: 174px;
+                height: 126px;
+                float: left;
+                margin-top: 26px;
+                text-align: left;
+            }
+            .MakeDetail {
+                width: 352px;
+                height: 46px;
+                line-height: 46px;
+                background: #fff;
+                color: #999;
+                text-align: center;
+                cursor: pointer;
+                border: none;
+                outline: none;
+            }
+        }
+        .returnBack {
+            width: 352px;
+            height: 46px;
+            line-height: 46px;
+            text-align: center;
+            background: #fff;
+            border: 1px solid #ccc;
+            color: #999;
+            position: absolute;
+            right: 500px;
+            top: -40px;
+            cursor: pointer;
+        }
+        .returnBack:hover{
+            border: 1px solid #00D5FF;
+        }
+    }
+    //客户详细的列表包括历史业务和现在的业务==========================业务
+    .SuperDetail {
+        width: 1368px;
+        height: 512px;
+        display: none;
+        .SDetailTop {
+            width: 100%;
+            height: 170px;
+            position: relative;
+            .personTop {
+                margin: 27px 0 0 19px;
+                img,
+                dt,
+                dd {
+                    float: left;
+                }
+                dt {
+                    margin: 15px 21px 0 38px;
+                }
+                dd {
+                    margin-top: 15px;
+                }
+            }
+            .OverSer {
+                width: 172px;
+                height: 32px;
+                cursor: pointer;
+                line-height: 32px;
+                text-align: center;
+                background: #1BB668;
+                position: absolute;
+                left: 260px;
+                top: 100px;
+            }
+        }
+        .SDetailDown {
+            width: 100%;
+            height: 342px;
+            background: #fff;
+            position: relative;
+            .SDetailDownleft {
+                width: 622px;
+                height: 100%;
+                float: left;
+                p {
+                    width: 97px;
+                    height: 32px;
+                    line-height: 32px;
+                    display: block;
+                    text-align: center;
+                    cursor: pointer;
+                }
+                .onworking {
+                    position: absolute;
+                    top: -32px;
+                    background: #fff;
+                    color: #95989A;
+                }
+                .onWorks {
+                    width: 622px;
+                    height: 288px;
+                    overflow: hidden;
+                    .onWList {
+                        width: 622px;
+                        height: 288px;
+                        margin: 0;
+                        padding: 0;
+                        table {
+                            width: 622px;
+                            cursor: pointer;
+                        }
+                        td {
+                            height: 32px;
+                            line-height: 32px;
+                            text-align: left;
+                        }
+                        td:nth-of-type(1) {
+                            width: 40%;
+                            text-indent: 45px;
+                        }
+                        td:nth-of-type(2) {
+                            width: 30%;
+                        }
+                        td:nth-of-type(3) {
+                            width: 20%;
+                            text-align: center;
+                        }
+                        td:nth-of-type(4) {
+                            width: 8%;
+                            text-align: center;
+                        }
+                    }
+                    .oBg {
+                        width: 52px;
+                        height: 34px;
+                        position: relative;
+                    }
+                }
+                .histortWork {
+                    position: absolute;
+                    top: -32px;
+                    left: 98px;
+                    background: #95989A;
+                    color: #fff;
+                }
+                .onHistory {
+                    width: 622px;
+                    height: 288px;
+                    overflow: hidden;
+                    display: none;
+                    table {
+                        width: 622px;
+                        height: 32px;
+                        line-height: 32px;
+                        cursor: pointer;
+                    }
+                    //                  table:nth-of-type(1) {
+                    //                      background: #157BBB;
+                    //                      color: #fff;
+                    //                  }
+                    td:nth-of-type(1) {
+                        text-indent: 45px;
+                        width: 30%;
+                        text-align: left;
+                    }
+                    td:nth-of-type(3) {
+                        width: 15%;
+                        text-align: center;
+                    }
+                    td:nth-of-type(4) {
+                        width: 15%;
+                    }
+                    //                  table:hover {
+                    //                      background: #1BB668;
+                    //                      color: #fff;
+                    //                  }
+                }
+            }
+            .SDetailDownright {
+                width: 722px;
+                height: 100%;
+                float: left;
+                text-align: center;
+                line-height: 342px;
+            }
+        }
+    }
+    //上边的内容区，需要改变的地方  -------------------------- 
+    .TopContent {
+        width: 1358px;
+        height: 512px;
+        //  display: none;//如果传的参数为code==1则表示用户存在，那么就让该模块显示隐藏，如果code==0那么就让该模块继续显示
+    }
+    //左边
+    .CTLeft {
+        width: 390px;
+        height: 512px;
+        float: left;
+        position: relative;
+        .Detaildel {
+            width: 98px;
+            height: 132px;
+            position: absolute;
+            top: 185px;
+            left: 70px;
+            li {
+                line-height: 34px;
+            }
+        }
+        .DetailName {
+            width: 126px;
+            height: 132px;
+            position: absolute;
+            top: 185px;
+            left: 190px;
+            li {
+                line-height: 34px;
+                display: none;
+            }
+            li:nth-of-type(1){
+                display: block;
+            }
+        }
+    }
+    //拍照中间
+    .CTMiddle {
+        width: 540px;
+        height: 512px;
+        float: left;
+        position: relative;
+        .backgrounds {
+            margin-top: 80px;
+        }
+        .cameraPic {
+            position: absolute;
+            top: 194px;
+            left: 234px;
+            cursor: pointer;
+        }
+        .takePic {
+            width: 194px;
+            height: 46px;
+            line-height: 46px;
+            text-align: center;
+            background: #fff;
+            cursor: pointer;
+            position: absolute;
+            top: 298.5px;
+            left: 174.5px;
+            outline: none;
+            border: none;
+        }
+        .Nextone {
+            width: 194px;
+            height: 46px;
+            line-height: 46px;
+            text-align: center;
+            background: #fff;
+            cursor: pointer;
+            position: absolute;
+            top: 356.5px;
+            left: 174.5px;
+        }
+        #video {
+            position: absolute;
+            top: 81px;
+            //  display: none;
+        }
+        #myCanvas {
+            position: absolute;
+            top: 81px;
+            right: 0px;
+        }
+    }
+    //右边
+    .CTRight {
+        width: 422px;
+        height: 512px;
+        float: left;
+        position: relative;
+        .search {
+            position: absolute;
+            top: 74.5px;
+            left: 96px;
+            cursor: pointer;
+        }
+        .addUser {
+            cursor: pointer;
+            width: 193.5px;
+            height: 168.5px;
+            background: #fff;
+            position: absolute;
+            top: 268.5px;
+            left: 96px;
+            .adds {
+                position: absolute;
+                top: 34px;
+                left: 63px;
+            }
+            p {
+                position: absolute;
+                top: 123.5px;
+                left: 68.5px;
+                color: #C8C8C8;
+            }
+        }
+    }
+    //搜索样式
+    .Searchother {
+        position: absolute;
+        top: 66px;
+        left: 180px;
+        width: 1000px;
+        height: 147px;
+        background: #fff;
+        border-radius: 5px;
+        box-shadow: 2px 2px 2px #ccc;
+        display: none;
+        .ant-input-search-icon {
+            position: absolute;
+            top: 10px;
+            right: -130px;
+            font-size: 50px;
+        }
+        #sear_box {
+            margin: 30px 0 0 37px;
+            font-size: 40px;
+            text-indent: 10px;
+        }
+    }
+    //添加用户样式
+    .AddCustom {
+        width: 1243px;
+        height: 645px;
+        background: #fff;
+        position: absolute;
+        top: 45.5px;
+        left: 68px;
+        z-index: 1;
+        display: none;
+        h1 {
+            font-size: 36px;
+            font-weight: 100;
+            text-indent: 51px;
+            line-height: 136px;
+        }
+        .AddCont {
+            width: 1141px;
+            height: 434px;
+            border: 1px solid #ccc;
+            margin-left: 51px;
+            .ACLeft {
+                width: 625px;
+                height: 100%;
+                box-sizing: border-box;
+                border-right: 1px solid #ccc;
+                box-sizing: border-box;
+                position: relative;
+                top: 0;
+                left: 0;
+                float: left;
+                #videoes {
+                    position: absolute;
+                    top: 33px;
+                    left: 35px;
+                }
+                #otherCanvas {
+                    position: absolute;
+                    top: 33px;
+                    left: 35px;
+                }
+                .ClickName {
+                    width: 194px;
+                    height: 46px;
+                    line-height: 46px;
+                    text-align: center;
+                    background: #fff;
+                    position: absolute;
+                    top: 252px;
+                    left: 222px;
+                    cursor: pointer;
+                }
+            }
+        }
+        .ACRight {
+            width: 516px;
+            height: 434px;
+            position: absolute;
+            right: 51px;
+            p {
+                width: 100%;
+                height: 80px;
+                line-height: 80px;
+                text-indent: 32px;
+                border-bottom: 1px solid #ccc;
+                input {
+                    width: 328px;
+                    height: 36px;
+                    font-size: 12px;
+                    outline: none;
+                    text-indent: 6px;
+                    margin-left: 20px;
+                    border: none;
+                }
+                .searchICon {
+                    width: 24px;
+                    height: 24px;
+                    cursor: pointer;
+                    position: absolute;
+                    top: 30px;
+                    right: 25px;
+                }
+            }
+            .addCustom {
+                margin: 56px 0 0 36px;
+                input {
+                    width: 212px;
+                    height: 46px;
+                    box-sizing: border-box;
+                    background: #fff;
+                    color: #999;
+                    border: 1px solid #ccc;
+                    margin-right: 22px;
+                    cursor: pointer;
+                    outline: none;
+                }
+              #addbtn{
+                  background: #1BB668;
+                  color: #fff;
+              } 
+              #addbtn:hover{
+                  background: #22E684;
+              } 
+              #cancel{
+                  background: #fff;
+                  border: 1px solid #DCE0E8;
+              }
+              #cancel:hover{
+                  border: 1px solid #00D5FF;
+              }
+            }
+        }
+    }
+    //下面用户列表
+    .CMDown {
+        width: 100%;
+        height: 448px;
+        background: #EDF0F7;
+        .CustomList {
+            width: 100%;
+            height: 318px;
+            float: left;
+            overflow: hidden;
+            table {
+                width: 100%;
+                height: 46px;
+                line-height: 46px;
+                border-bottom: 1px solid #D5D8DE;
+                cursor: pointer;
+                .imgStaus {
+                    width: 86px;
+                    position: relative;
+                    img {
+                        width: 21px;
+                        height: 21px;
+                        display: block;
+                        margin: 0 auto;
+                    }
+                    .point {
+                        width: 10px;
+                        height: 10px;
+                        position: absolute;
+                        top: 12px;
+                        right: 35px;
+                        display: none;
+                    }
+                }
+                td:nth-of-type(2) {
+                    width: 20%;
+                    text-align: left;
+                }
+                td:nth-of-type(3) {
+                    width: 20%;
+                    text-align: center;
+                }
+                td:nth-of-type(4) {
+                    width: 30%;
+                    text-align: center;
+                }
+                td:nth-of-type(5) {
+                    text-align: center;
+                    width: 240px;
+                }
+            }
+            li:nth-of-type(1) {
+                background: #545CA6 url("./../img/Group 110.png") no-repeat 44px 12px;
+                color: #fff;
+                img {
+                    display: none;
+                }
+            }
+            li:nth-of-type(2) {
+                .point {
+                    display: block;
+                }
+            }
+        }
+    }
+}
+
+.mask {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    z-index: 9;
+}
+
+.QueryDetail {
+    width: 1064px;
+    height: 832px;
+    background: #fff;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    border: 1px solid #ccc;
+    z-index: 1;
+    h1 {
+        font-size: 36px;
+        line-height: 88px;
+        text-align: center;
+        font-weight: 100;
+        color: #4A4A4A;
+    }
+    .otherList {
+        width: 975px;
+        height: 54px;
+        line-height: 54px;
+        margin: 0 auto;
+        p {
+            width: 194px;
+            float: left;
+        }
+        p:nth-of-type(2) {
+            width: 120px;
+            float: right;
+        }
+    }
+    .QDCont {
+        width: 975px;
+        height: 147px;
+        margin: 0 auto;
+        box-sizing: border-box;
+        table {
+            border-collapse: collapse;
+            border: 1px solid #DCE0E8;
+            text-align: center;
+            td {
+                height: 46px;
+                border: 1px solid #DCE0E8;
+                padding: 0.2em;
+            }
+        }
+    }
+    .WriteCont {
+        width: 975px;
+        height: 310px;
+        border-bottom: 1px solid #DCE0E8;
+        border-left: 1px solid #DCE0E8;
+        border-right: 1px solid #DCE0E8;
+        margin: 0 auto;
+        margin-top: -8px;
+        overflow: hidden;
+        #WContTop,
+        #WContDown {
+            width: 952px;
+            height: 130px;
+            background: #EDF0F7;
+            margin: 10px 10px;
+            outline: none;
+            text-indent: 20px;
+            font-size: 14px;
+            line-height: 40px;
+        }
+    }
+    #BtnStaus {
+        width: 976px;
+        height: 77px;
+        background: #DCE0E8;
+        margin: 0 auto;
+        position: relative;
+        .AllowWork,
+        .refuseWork {
+            width: 460px;
+            height: 45px;
+            line-height: 45px;
+            text-align: center;
+            cursor: pointer;
+            margin-left: 16px;
+            margin-top: 16px;
+            font-size: 18px;
+            float: left;
+        }
+        .AllowWork {
+            background: #1BB668;
+            color: #fff;
+        }
+        .refuseWork {
+            background: #fff;
+            border: 1px solid #E5E5E5;
+            box-sizing: border-box;
+        }
+        .refuseWork:hover {
+            border: 1px solid #00D5FF;
+        }
+        .AllowWork:hover {
+            background: #22E684;
+            color: #fff;
+        }
+        .Allyes {
+            position: absolute;
+            top: 26px;
+            left: 438px;
+        }
+        .AllNo {
+            position: absolute;
+            top: 26px;
+            right: 34px;
+        }
+    }
+    #SureBtn {
+        position: absolute;
+        bottom: 30px;
+        right: 30px;
+        background: #fff;
+        border: none;
+        outline: none;
+        cursor: pointer;
+    }
+}
